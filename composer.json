@@ -24,7 +24,7 @@
         ],
         "psr-4": {
             "App\\": "app/",
-            "Thekavish\\Todolist\\":"packages/thekavish/todolist/src"
+          "Thekavish\\Todolist\\": "packages/thekavish/todolist/src/"
         }
     },
     "autoload-dev": {
