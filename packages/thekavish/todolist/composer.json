@@ -1,0 +1,22 @@
+{
+    "name": "thekavish/todolist",
+    "description": "You can create the to-do-list of your task.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kavish",
+            "email": "kavish619@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Thekavish\\Todolist\\ServiceProvider"
+            ]
+        }
+    },
+    "require": {}
+}

@@ -23,7 +23,8 @@
             "database/factories"
         ],
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "Thekavish\\Todolist\\":"packages/thekavish/todolist/src"
         }
     },
     "autoload-dev": {
