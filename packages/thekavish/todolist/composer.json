@@ -1,11 +1,12 @@
 {
   "name": "thekavish/todolist",
   "description": "You can create the todo-list of your task.",
+  "keywords": ["todo","tasks"],
   "type": "library",
   "license": "MIT",
   "authors": [
     {
-      "name": "Kavish",
+      "name": "Kavish Patel",
       "email": "kavish619@gmail.com"
     }
   ],
@@ -22,7 +23,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Thekavish\\Todolist\\Providers\\TodolistServiceProvider"
+        "Thekavish\\Todolist\\TodolistServiceProvider"
       ]
     }
   }

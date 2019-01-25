@@ -1,6 +1,6 @@
 <?php
 
-namespace Thekavish\Todolist\Providers;
+namespace Thekavish\Todolist;
 
 use Illuminate\Support\ServiceProvider;
 

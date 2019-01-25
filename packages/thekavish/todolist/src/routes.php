@@ -1,3 +1,3 @@
 <?php
 
-Route::resource('/task', 'Wisdmlabs\Todolist\TodolistController');
+Route::resource('/task', 'Thekavish\Todolist\Controllers\TaskController');
