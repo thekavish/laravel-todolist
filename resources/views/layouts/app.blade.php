@@ -11,7 +11,8 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{ Html::style('css/app.css') }}
+    {{ Html::style('css/font-awesome.min.css') }}
 </head>
 <body>
     <div id="app">
@@ -75,6 +76,8 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    {{ Html::script('js/app.js') }}
+    {{ Html::script('js/jquery-3.3.1.min.js') }}
+    @include('todolist::js')
 </body>
 </html>

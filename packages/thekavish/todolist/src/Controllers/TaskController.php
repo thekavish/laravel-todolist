@@ -28,7 +28,7 @@ class TaskController extends Controller
         $tasks  = Task::all();
         $submit = 'Add';
 
-        return view('thekavish.todolist.list', compact('tasks', 'submit'));
+        return view('todolist::list', compact('tasks', 'submit'));
     }
 
     /**
@@ -52,12 +52,13 @@ class TaskController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function edit(Task $task)
+    public function edit($task)
     {
+        $task   = Task::findOrFail($task);
         $tasks  = Task::all();
         $submit = 'Update';
 
-        return view('thekavish.todolist.list', compact('tasks', 'task', 'submit'));
+        return view('todolist::list', compact('tasks', 'task', 'submit'));
     }
 
     /**
@@ -68,8 +69,9 @@ class TaskController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Task $task)
+    public function update(Request $request, $task)
     {
+        $task = Task::findOrFail($task);
         $task->update($request->all());
 
         return redirect()->route('task.create');
@@ -83,10 +85,25 @@ class TaskController extends Controller
      * @return Response
      * @throws \Exception
      */
-    public function destroy(Task $task)
+    public function destroy($task)
     {
+        $task = Task::findOrFail($task);
         $task->delete();
 
         return redirect()->route('task.create');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  Request $request
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function toggleComplete(Request $request)
+    {
+        $task = Task::findOrFail($request->task)->update(['complete'=>$request->complete?1:0]);
+
+        return redirect()->back();
     }
 }
