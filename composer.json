@@ -8,11 +8,12 @@
     "license": "MIT",
     "type": "project",
     "require": {
-      "php": ">=7.0.0",
-      "fideloper/proxy": "~3.3",
-      "laravel/framework": "5.5.*",
-      "laravel/tinker": "~1.0",
-      "thekavish/todolist": "@dev"
+        "php": ">=7.0.0",
+        "fideloper/proxy": "~3.3",
+        "laravel/framework": "5.5.*",
+        "laravel/tinker": "~1.0",
+        "laravelcollective/html": "^5.5",
+        "thekavish/loginlogger": "@dev"
     },
     "require-dev": {
       "filp/whoops": "~2.0",
@@ -60,12 +61,7 @@
       {
         "name": "thekavish/todolist",
         "type": "path",
-        "url": "packages/thekavish/todolist/"
-      },
-      {
-        "name": "thekavish/jsonfiles",
-        "type": "path",
-        "url": "../composer-packages/thekavish/jsonfiles/"
+        "url": "../loginlogger/"
       }
     ]
   }
